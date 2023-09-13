@@ -46,13 +46,6 @@ export function getRandomTest(): string {
     return testList[randomTest];
 }
 
-const quizCategoryList = ["Earum et aperiam laborum id.", "Amet voluptate rem sed.", "Quod laudantium facilis alias error in."]
-
-export function getRandomQuizCategory(): string {
-    const randomQuizCategory = Math.floor(Math.random() * quizCategoryList.length);
-    return courseCategoryList[randomQuizCategory];
-}
-
 const URLsList = ["https://en.wikipedia.org/wiki/Doncaster", "https://en.wikipedia.org/wiki/Castra", "https://en.wikipedia.org/wiki/Cornelius_Nepos", "https://en.wikipedia.org/wiki/Chair", "https://en.wikipedia.org/wiki/Ivory"]
 
 export function getRandomURL(): string {
@@ -164,10 +157,7 @@ const emaillist = [
     'tomufo@mailto.plus',
     'email@email.com',
     'lejoy98516@aaorsi.com',
-    'denel38657@dronetz.com',
-    'virim11345@peogi.com',
-    'hegefo5046@dotvilla.com',
-    'jdwinx@yahoo.com'
+    'denel38657@dronetz.com'
 ]
 
 export function getNextEmail(): string {
