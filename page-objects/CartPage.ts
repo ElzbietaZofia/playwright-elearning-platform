@@ -22,7 +22,7 @@ export class CartPage {
 
    checkoutButton = this.page.getByTestId('checkout_bottom')
    purchaseLoginModal = this.page.getByText('To purchase payment')
-   purchaseLoginModalLoginButton = this.page.locator('div').filter({ hasText: 'Log in Or register' }).getByRole('button', { name: 'Log in' })
+   purchaseLoginModalLoginButton = this.page.getByRole('button', { name: 'Log in' })
    purchaseToastSuccess = this.page.getByText('Congratulations! Your purchase was successful.')
 
    signInModalEmailInput = this.page.getByLabel('Email Address')
