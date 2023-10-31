@@ -6,7 +6,7 @@ constructor(private page: Page) {}
 adminEmailInput = this.page.getByLabel('Email Address')
 adminPasswordInput = this.page.getByLabel('Password')
 adminLoginButton = this.page.getByRole('button', { name: 'Login' })
-logoutIcon = this.page.locator('.v-navigation-drawer__append > .v-list > div:nth-child(2) > .v-list-item__prepend')
+logoutIcon = this.page.locator('.v-navigation-drawer__append')
 alertMsgInvalidCredentials = this.page.getByText('Invalid Email or Password')
 adminPanelHeader = this.page.getByRole('heading', { name: 'Admin dashboard' })
 
