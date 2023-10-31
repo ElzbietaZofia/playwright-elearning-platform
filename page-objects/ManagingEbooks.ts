@@ -29,16 +29,16 @@ export class AdminEbooks {
     toastFailedEbookCreation = this.page.getByText('Unable to create the resource. Double check the validity of data.')
     toastSuccessfulEbookDeletion = this.page.getByText('You have successfully deleted a eBook.')
 
-    eBookToBeDeletedTooltip = this.page.locator('//*[@id="__nuxt"]/div/div/div/main/div/div/div[3]/div/table/tbody/tr[17]/td[1]/button')
+    eBookToBeDeletedTooltip = this.page.getByTestId('menu_tool_22')
     eBookToBeDeletedEdit = this.page.locator('div').filter({ hasText: 'Edit' }).first()
     eBookToBeDeletedDelete = this.page.locator('div').filter({ hasText: 'Delete' }).first()
     eBookToBeDeletedTitleOnList = this.page.getByRole('cell', { name: 'eBook to be deleted' })
     modalDeleteEbookConfirm = this.page.getByRole('button', { name: 'Delete' })
 
-    eBookNameValidationMsg = this.page.getByTestId('name_field').locator('div').filter({ hasText: 'Value is required' }).first()
-    eBookAuthorsValidationMsg = this.page.locator('div').filter({ hasText: 'Value is required' }).first()
-    eBookOverviewValidationMsg = this.page.getByText('Overview* Value is required')
-    eBookAboutAuthorsValidationMsg = this.page.locator('//*[@id="#formTop"]/div/div[12]/small')
+    eBookNameValidationMsg = this.page.getByTestId('msg_field_44')
+    eBookAuthorsValidationMsg = this.page.getByTestId('msg_field_46')
+    eBookOverviewValidationMsg = this.page.getByTestId('msg_field_51')
+    eBookAboutAuthorsValidationMsg = this.page.getByTestId('msg_field_54')
     eBookFileValidationMsg = this.page.getByTestId('ebook_file_field').getByText('Value is required')
     eBookCoverValidationMsg = this.page.getByTestId('cover_file_field').getByText('Value is required')
 
@@ -46,7 +46,7 @@ export class AdminEbooks {
     searchBoxInput = this.page.getByLabel('Search')
 
     positiveSearchResult = this.page.getByRole('cell', { name: 'USB 3.0' })
-    searchResultContainer = this.page.locator('//*[@id="__nuxt"]/div/div/div/main/div/div/div[3]/div/table/tbody')
+    searchResultContainer = this.page.getByTestId('data-v-ddcbdd57')
 
     //Editing
     eBookTooltipPCI = this.page.locator('[data-test-id="options-button-2"]')
