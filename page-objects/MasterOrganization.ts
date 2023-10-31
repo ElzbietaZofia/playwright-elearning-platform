@@ -36,7 +36,7 @@ export class MasterOrganization {
 
 	usersSearchBoxInput = this.page.locator('#input-25')
 	searchResultExample = this.page.getByRole('cell', { name: 'user@xxx.com' })
-	saerchResultContainer = this.page.locator('//*[@id="__nuxt"]/div/div[2]/div[2]/div[2]/div[3]/div/table/tbody')
+	saerchResultContainer = this.page.getByTestId(data-v-ddcbdnj77)
 
 
 
