@@ -1,9 +1,13 @@
 {
-  "name": "learning-platform",
+  "name": "elearning-platform",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sanity tests of basic user and administrator paths",
   "main": "index.js",
   "scripts": {
+    "test:chrome": "playwright test --config=playwright.config.ts --project=Chromium",
+    "test:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
+    "test:webkit": "playwright test --config=playwright.config.ts --project=Webkit",
+    "test:e2e": "playwright test --config=e2e.config.ts --reporter=html",
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "lint": "eslint . --fix --max-warnings=0",
@@ -11,7 +15,7 @@
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
+  "author": "E. Wilk",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.31.2",
